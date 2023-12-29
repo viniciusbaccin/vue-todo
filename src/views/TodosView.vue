@@ -10,23 +10,51 @@
 				@toggle-complete="toggleTodoComplete"
 				@editing-todo="editingTodo"
 				@update-todo="updateTodo"
+				@delete-todo="deleteTodo"
 			/>
 		</ul>
 		<p class="todos-msg" v-else>
 			<Icon icon="noto-v1:sad-but-relieved-face" width="22" />
 			<span>Nenhuma tarefa para completar! Adicione uma!</span>
 		</p>
+		<p v-if="todoCompleted && todoList.length >  0" class="todos-msg">
+			<Icon icon="noto-v1:party-popper" width="22" />
+			<span>Todas as tarefas foram concluídas!</span>
+		</p>
 	</main>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch, computed } from "vue";
 import { uid } from "uid";
 import { Icon } from "@iconify/vue"
 import TodoCreator from "@/components/TodoCreator.vue";
 import TodoItem from "@/components/TodoItem.vue";
 
 const todoList = ref([]);
+
+watch(todoList, () => {
+	setTodoListLocalStorage();
+}, {
+	deep: true,
+})
+
+const todoCompleted = computed(() => {
+	return todoList.value.every((todo) => todo.isCompleted)
+})
+
+const fetchTodoList = () => {
+	const savedTodoList = JSON.parse(localStorage.getItem("todoList"));
+	if (savedTodoList) {
+		todoList.value = savedTodoList
+	}
+}
+
+fetchTodoList()
+
+const setTodoListLocalStorage = () => {
+	localStorage.setItem("todoList", JSON.stringify(todoList.value))
+}
 
 const createTodo = (todo) => {
 	todoList.value.push({
@@ -47,6 +75,10 @@ const editingTodo = (todoIndex) => {
 
 const updateTodo = (todoValue, todoIndex) => {
 	todoList.value[todoIndex].todo = todoValue;
+}
+
+const deleteTodo = (todoId) => {
+	todoList.value = todoList.value.filter((todo) => todo.id !== todoId)
 }
 
 </script>

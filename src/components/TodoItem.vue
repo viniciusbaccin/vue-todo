@@ -38,6 +38,7 @@
                 class="icon" 
                 color="#f95e5e" 
                 width="22" 
+                @click="$emit('delete-todo', todo.id)"
             />
         </div>
     </li>
@@ -56,7 +57,7 @@ const props = defineProps({
         required: true,
     },
 })
-defineEmits(["toggle-complete", "editing-todo", "update-todo"])
+defineEmits(["toggle-complete", "editing-todo", "update-todo", "delete-todo"])
 </script>
 
 <style lang="scss" scoped>
