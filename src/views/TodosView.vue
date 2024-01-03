@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<h1>Create Todo</h1>
-		<TodoCreator @create-todo="createTodo" />
+				<TodoCreator @create-todo="createTodo" />
 		<ul class="todo-list" v-if="todoList.length > 0">
 			<TodoItem 
 				v-for="(todo, index) in todoList" 

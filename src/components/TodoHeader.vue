@@ -2,7 +2,7 @@
     <header>
         <nav class="container">
             <div class="branding">
-                <img src="../assets/Vue_Logo_Black.png" alt="">
+                <img src="../assets/icon-256-light.png" alt="">
                 <h1> Vue Todo </h1>
             </div>
             <ul class="nav-routes">
@@ -20,11 +20,14 @@ import { RouterLink } from 'vue-router';
 
 <style lang="scss" scoped>
 header {
-    background-color: #f1f1f1;
+    background: #02457A;
+    //background: linear-gradient(0deg, rgba(18, 61, 70, 1) 0%, rgba(22, 45, 55, 1) 64%, rgba(23, 39, 49, 1) 84%, rgba(25, 30, 41, 1) 100%);
+    color: #ffffff;
+
     nav {
         display: flex;
         align-items: center;
-        padding: 25px 16px;
+        padding: 15px 16px;
 
         .branding {
             display: flex;
@@ -32,7 +35,7 @@ header {
             gap: 8px;
 
             img {
-                max-width: 50px;
+                max-width: 35px;
             }
 
             h1 {

@@ -1,6 +1,6 @@
 <template>
     <div class="input-wrap" :class="{ 'input-err' : todoState.invalid }">
-        <input type="text" v-model="todoState.todo" />
+        <input type="text" v-model="todoState.todo" @keyup.enter="createTodo()"/>
         <TodoButton @click="createTodo()" />
     </div>
     <p v-show="todoState.invalid" class="err-msg"> {{ todoState.errMsg }}</p>
@@ -35,7 +35,8 @@ const createTodo = () => {
 .input-wrap {
     display: flex;
     transition: 250ms ease;
-    border: 2px solid #41b080;
+    border: 2px solid #123d46;
+    border-radius: 9px;
 
     &.input-err {
         border-color: red;
@@ -50,6 +51,7 @@ const createTodo = () => {
         width: 100%;
         padding: 8px 6px;
         border: none;
+        border-radius: 9px;
 
         &:focus {
             outline: none;
