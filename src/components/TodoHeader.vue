@@ -6,8 +6,8 @@
                 <h1> Vue Todo </h1>
             </div>
             <ul class="nav-routes">
-                <RouterLink to="/">Home</RouterLink>
-                <RouterLink to="/about">About</RouterLink>
+                <RouterLink to="/">Inicio</RouterLink>
+                <RouterLink to="/about">Sobre</RouterLink>
             </ul>
         </nav>
     </header>
@@ -21,7 +21,6 @@ import { RouterLink } from 'vue-router';
 <style lang="scss" scoped>
 header {
     background: #02457A;
-    //background: linear-gradient(0deg, rgba(18, 61, 70, 1) 0%, rgba(22, 45, 55, 1) 64%, rgba(23, 39, 49, 1) 84%, rgba(25, 30, 41, 1) 100%);
     color: #ffffff;
 
     nav {

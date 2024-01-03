@@ -29,7 +29,7 @@
                 v-else 
                 icon="ph:pencil-fill" 
                 class="icon" 
-                color="#41b080" 
+                color="#018ABE" 
                 width="22" 
                 @click="$emit('editing-todo', index)"
             />
@@ -85,7 +85,7 @@ li {
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
         &:checked {
-            background-color: #41b080;
+            background-color: #018ABE;
         }
     }
 
@@ -99,7 +99,7 @@ li {
         input[type="text"] {
             width: 100%;
             padding: 2px 6px;
-            border: 2px solid #41b080;
+            border: 2px solid #018ABE;
         }
     }
 

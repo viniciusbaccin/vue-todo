@@ -35,7 +35,7 @@ const createTodo = () => {
 .input-wrap {
     display: flex;
     transition: 250ms ease;
-    border: 2px solid #123d46;
+    border: 2px solid #001B48;
     border-radius: 9px;
 
     &.input-err {

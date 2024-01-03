@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<h1>Create Todo</h1>
+		<h1>Criar Tarefa</h1>
 				<TodoCreator @create-todo="createTodo" />
 		<ul class="todo-list" v-if="todoList.length > 0">
 			<TodoItem 
@@ -15,7 +15,7 @@
 		</ul>
 		<p class="todos-msg" v-else>
 			<Icon icon="noto-v1:sad-but-relieved-face" width="22" />
-			<span>Nenhuma tarefa para completar! Adicione uma!</span>
+			<span>Nenhuma tarefa para completar! Adicione novas!</span>
 		</p>
 		<p v-if="todoCompleted && todoList.length >  0" class="todos-msg">
 			<Icon icon="noto-v1:party-popper" width="22" />
@@ -95,6 +95,7 @@ main {
 	h1 {
 		margin-bottom: 16px;
 		text-align: center;
+		color: #001B48;
 	}
 
 	.todo-list {

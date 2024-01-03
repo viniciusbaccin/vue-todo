@@ -1,11 +1,11 @@
 <template>
     <main>
         <p>
-            This is a 'Todo' application created in Vue 3.
-            With it you can create, save, edit, complete and delete tasks.
+            Este é um aplicativo 'Todo' criado com Vue 3 (Composition API) em Vite.
+            Com ele você pode criar, salvar, editar e excluir tarefas.
             <br><br>
-            The application was developed as part 1 of a personal project.
-            In the next stage I will develop the same application but with the Quasar framework.
+            O aplicativo foi desenvolvido como a primeira parte de um projeto pessoal.
+            Na próxima etapa irei desenvolver a mesma aplicação mas com o framework Quasar e utilizando Options API.
         </p>
     </main>
 </template>

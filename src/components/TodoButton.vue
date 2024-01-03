@@ -1,5 +1,5 @@
 <template>
-    <button>Create</button>
+    <button>Criar</button>
 </template>
 
 <script setup>
@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 button {
-    background-color: #123d46;
+    background-color: #02457A;
     color: #ffffff;
     padding: 8px 16px;
     margin: 5px;
