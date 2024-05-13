@@ -2,7 +2,7 @@
 
 Simple Todo app with Vue 3 (Composition API) in Vite.
 
-Acess: [vue-todo](https://vue-todo-five-alpha.vercel.app)
+Demo: [vue-todo](https://vue-todo-baccin.vercel.app)
 
 ## Customize configuration
 
